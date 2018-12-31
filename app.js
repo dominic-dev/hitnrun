@@ -80,6 +80,20 @@ io.on('connection', (socket) => {
             }
         }
 
+
+        for (let id in players) {
+            if (socket.id != id) {
+                let opponent = players[id]
+                console.log('checking opponent')
+                if (Math.abs(player.x - opponent.x) < size &&
+                    Math.abs(player.y - opponent.y) < size) {
+                    console.log('hit')
+                    moved = false
+                    player.velocity = 0.5
+                }
+            }
+        }
+
         if (moved) {
             player.velocity *= acceleration
         } else {
