@@ -1,0 +1,12 @@
+#highscore {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+}
+#topscore {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+
+}
